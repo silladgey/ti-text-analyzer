@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package text_analyzer;
+
+service TextAnalysis {
+  rpc AnalyzeWord (WordRequest) returns (AnalysisResponse) {}
+}
+
+message WordRequest { }
+
+message AnalysisResponse {
+  float avg_word_length = 1;
+  float avg_sentence_length = 2;
+  map<string, int32> archaic_word_counts = 3;
+}

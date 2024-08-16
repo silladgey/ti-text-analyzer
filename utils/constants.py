@@ -1,0 +1,3 @@
+PORT = 50052
+TEXT_ANALYZER_BASE_URL = f"localhost:{PORT}"
+TEXT_READER_BASE_URL = "text-reader:50051"

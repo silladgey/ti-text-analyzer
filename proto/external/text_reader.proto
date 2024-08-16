@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package text_reader;
+
+// The request message containing the client's request for the next word.
+message WordRequest {}
+
+// The response message containing the next word from the text.
+message WordResponse {
+  string word = 1;  // The next word from the text
+  bool eof = 2;     // Indicates if this is the last word (End of File)
+}
+
+// The TextReader service definition.
+service TextReader {
+  // Sends the next word from the text
+  rpc GetNextWord (WordRequest) returns (WordResponse) {}
+}
